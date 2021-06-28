@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 26-05-2021, 07:29:36 PM
-    Author     : Melissa Ibañez Lopez
+    Author     : Melissa Ibañez Lopez ft Misael
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,12 +22,13 @@
     <div class="card">
         <div class="card-header bg-info">
             <h1 style="color: white">MENU DE OPCIONES</h1>
-        </div>
-        
+        </div>  
         <div class="card-body">
-            <a href="registrarCategoria.jsp" class="list-group-item list-group-item-action">REGISTRAR CATEGORIA</a>
-            <a href="listaCategoria.jsp" class="list-group-item list-group-item-action"> LISTA CATEGORIA </a>
-            <a href="listaProducto.jsp" class="list-group-item list-group-item-action"> LISTA PRODUCTOS </a>
+            <a href="registrarCategoria.jsp" class="list-group-item list-group-item-action">Registrar Categoria</a>
+            <a href="listaCategoria.jsp" class="list-group-item list-group-item-action"> Lista de Categoria </a>
+            <a href="listaProducto.jsp" class="list-group-item list-group-item-action"> Lista de Productos </a>
+            <a href="busquedaUsuario.jsp" class="list-group-item list-group-item-action"> Busqueda de Usuarios </a>
+            <a href="productoBajoStock.jsp" class="list-group-item list-group-item-action"> Productos con Menor Stock </a>
         </div>
     </div>    
 </main>
