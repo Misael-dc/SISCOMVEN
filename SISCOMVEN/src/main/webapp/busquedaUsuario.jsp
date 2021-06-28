@@ -1,7 +1,6 @@
 <%-- 
-    Document   : listaCategoria
-    Created on : 01-06-2021, 08:39:55 PM
-    Author     : Melissa Ibañez Lopez
+    Created on : 27-06-2021 
+    Author     : Misael
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
