@@ -1,7 +1,7 @@
 <%-- 
-    Document   : listaProducto
-    Created on : 02-06-2021, 07:49:05 PM
-    Author     : Melissa Ibañez Lopez
+    Document   : productoBajoStock
+    Created on : 27 jun. 2021, 21:32:34
+    Author     : Misael
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,6 +22,21 @@
                 <a href="index.jsp" class="btn btn-outline-primary">MENU INICIO</a>
             </div>
             <div class="card-body">
+                <form class="d-flex justify-content-between align-items-center" method="POST">
+                    
+                    <label for="formFileSm" class="form-label">Stock <= </label>
+                    <select class="form-select" name="cantidad" style="width: 80%"> 
+                        <option value="10000" selected>Elija una opcion</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+
+                    <button class="btn btn-outline-success" type="submit" name="buscar">Search</button>
+                </form>
+            </div>
+            <div class="card-body">
                 <jsp:useBean id="productoBean" scope="session" class="com.test.bean.ProductoBean"/>
                 <table class="table table-striped">
                     <thead>
@@ -36,7 +51,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                       <%=productoBean.listarProducto()%>
+                        <%
+                        if(request.getParameter("buscar") != null){
+                            String datos =  productoBean.productoBajoStock(request);
+                            out.print(datos);
+                        }else{
+                            String datos =  productoBean.productoBajoStock(null);
+                            out.print(datos);
+                        }
+                           
+                        %>
                     </tbody>
                 </table>
 
